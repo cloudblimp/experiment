@@ -1,0 +1,72 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Function declarations
+int add(int a, int b) {
+    return a + b;
+}
+
+int subtract(int a, int b) {
+    return a - b;
+}
+
+int multiply(int a, int b) {
+    return a * b;
+}
+
+float divide(int a, int b) {
+    if (b == 0) {
+        cout << "Error: Division by zero!" << endl;
+        return NAN;
+    }
+    return (float)a / b;
+}
+
+int modulus(int a, int b) {
+    if (b == 0) {
+        cout << "Error: Modulus by zero!" << endl;
+        return 0;
+    }
+    return a % b;
+}
+
+int main() {
+    int num1, num2, choice;
+
+    cout << "Enter first number: ";
+    cin >> num1;
+
+    cout << "Enter second number: ";
+    cin >> num2;
+
+    cout << "\nChoose operation:\n";
+    cout << "1. Addition\n";
+    cout << "2. Subtraction\n";
+    cout << "3. Multiplication\n";
+    cout << "4. Division\n";
+    cout << "5. Modulus\n";
+    cout << "Enter your choice (1-5): ";
+    cin >> choice;
+
+    switch (choice) {
+        case 1:
+            cout << "Sum of " << num1 << " and " << num2 << " is: " << add(num1, num2) << endl;
+            break;
+        case 2:
+            cout << "Difference of " << num1 << " and " << num2 << " is: " << subtract(num1, num2) << endl;
+            break;
+        case 3:
+            cout << "Product of " << num1 << " and " << num2 << " is: " << multiply(num1, num2) << endl;
+            break;
+        case 4:
+            cout << "Quotient of " << num1 << " and " << num2 << " is: " << divide(num1, num2) << endl;
+            break;
+        case 5:
+            cout << "Modulus of " << num1 << " and " << num2 << " is: " << modulus(num1, num2) << endl;
+            break;
+        default:
+            cout << "Invalid choice!" << endl;
+    }
+
+    return 0;
+}
